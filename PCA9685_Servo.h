@@ -65,6 +65,10 @@ public:
     void run();
     void off();
     void loop();
+    void stop();
+
+    bool isRunning();
+
 };
 
 #endif

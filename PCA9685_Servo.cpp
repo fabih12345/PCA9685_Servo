@@ -1,7 +1,6 @@
 #include "PCA9685_Servo.h"
 #include <Arduino.h>
 
-
 PCA9685_Servo::PCA9685_Servo(){}
 
 void PCA9685_Servo::loop(){
@@ -32,6 +31,11 @@ void PCA9685_Servo::loop(){
         running=false;
     }
 }
+
+void PCA9685_Servo::stop(){
+    running=false;
+}
+
 
 void PCA9685_Servo::begin(){
     Wire.begin();
@@ -167,4 +171,8 @@ void PCA9685_Servo::setMagnet(uint8_t num){
     } else {
         digitalWrite(2, HIGH);
     }
+}
+
+bool PCA9685_Servo::isRunning(){
+    return running;
 }

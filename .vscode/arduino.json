@@ -1,6 +1,6 @@
 {
     "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano",
-    "port": "COM4",
+    "port": "COM3",
     "sketch": "PCA9685_Servo.ino"
 }
